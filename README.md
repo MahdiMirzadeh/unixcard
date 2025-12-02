@@ -35,10 +35,12 @@ The app provides a real-time preview as you customize your card. All data is aut
 
 ```
 ├── html2canvas.min.js   # PNG export library
+├── favicon.svg          # Default favicon (dark theme, blue accent)
 ├── image.png            # Open Graph image (used in social media previews)
 ├── index.html           # Application structure
 ├── style.css            # All styling and theming
 ├── script.js            # All functionality and logic
+├── LICENSE              # Project license
 └── README.md            # This file
 ```
 
