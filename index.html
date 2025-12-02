@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dim" data-accent="blue">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta
+			name="description"
+			content="Create and share beautiful X.com-style system cards showcasing your Linux setup, distro, desktop environment, shell, and kernel version."
+		>
+		<title>unixcard - Create your system card</title>
+
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content="unixcard - Create your system card">
+		<meta
+			property="og:description"
+			content="Create and share beautiful X.com-style system cards showcasing your Linux setup, distro, desktop environment, shell, and kernel version."
+		>
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://card.mirzadeh.pro">
+		<meta property="og:image" content="https://card.mirzadeh.pro/image.png">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+
+		<!-- Twitter Card Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@MahdiMirzadehX">
+		<meta name="twitter:creator" content="@MahdiMirzadehX">
+		<meta name="twitter:title" content="unixcard - Create your system card">
+		<meta
+			name="twitter:description"
+			content="Create and share beautiful X.com-style system cards showcasing your Linux setup, distro, desktop environment, shell, and kernel version."
+		>
+		<meta name="twitter:image" content="https://card.mirzadeh.pro/image.png">
+		<meta
+			name="twitter:image:alt"
+			content="unixcard - A tool to create X.com-style system cards for your Linux setup"
+		>
+
+		<link rel="icon" type="image/svg+xml" href="favicon.svg">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- Preview -->
+			<div class="preview">
+				<div class="details-page">
+					<!-- Profile Section -->
+					<div class="profile-section">
+						<div class="profile-avatar" id="avatar">
+							<img id="avatarImg" alt="Profile" class="avatar-img">
+							<div id="avatarFallback">
+								<svg
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="currentColor"
+									width="32"
+									height="32"
+								>
+									<path
+										d="M14.62,8.35c-.42.28-1.75,1-1.95,1.19a.82.82,0,0,1-1.14,0c-.2-.16-1.53-.92-1.95-1.19s-.45-.7.08-.92a6.16,6.16,0,0,1,4.91,0c.49.21.51.6,0,.9m7.22,7.28A19.09,19.09,0,0,0,18,10a4.31,4.31,0,0,1-1.06-1.88c-.1-.33-.17-.67-.24-1A11.32,11.32,0,0,0,16,4.47,4.06,4.06,0,0,0,12.16,2,4.2,4.2,0,0,0,8.21,4.4a5.9,5.9,0,0,0-.46,1.34c-.17.76-.32,1.55-.5,2.32a3.38,3.38,0,0,1-1,1.71,19.53,19.53,0,0,0-3.88,5.35A6.09,6.09,0,0,0,2,16c-.19.66.29,1.12,1,1,.44-.09.88-.18,1.3-.31s.57,0,.67.35a6.73,6.73,0,0,0,4.24,4.5c4.12,1.56,8.93-.66,10-4.58.07-.27.17-.37.47-.27.46.14.93.24,1.4.35a.72.72,0,0,0,.92-.64,1.44,1.44,0,0,0-.16-.73"
+									/>
+								</svg>
+							</div>
+						</div>
+						<div class="profile-info">
+							<div class="profile-name-row">
+								<span class="profile-name" id="profileName">Mahdi Mirzadeh</span>
+								<div id="verifiedIcon" class="verified-icon hidden"></div>
+							</div>
+							<div class="profile-handle" id="profileHandle">@MahdiMirzadehX</div>
+						</div>
+					</div>
+
+					<!-- Details -->
+					<div id="detailsContainer"></div>
+				</div>
+
+				<!-- Action Buttons -->
+				<div class="action-buttons">
+					<button
+						id="copyBtn"
+						class="action-btn"
+						title="Copy card to clipboard"
+						aria-label="Copy card to clipboard"
+					>
+						<svg
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							width="16"
+							height="16"
+							aria-hidden="true"
+						>
+							<path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+							<rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+						</svg>
+						<span id="copyBtnText">Copy</span>
+					</button>
+					<button
+						id="downloadBtn"
+						class="action-btn"
+						title="Download card as PNG"
+						aria-label="Download card as PNG"
+					>
+						<svg
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							width="16"
+							height="16"
+							aria-hidden="true"
+						>
+							<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+							<polyline points="7 10 12 15 17 10"></polyline>
+							<line x1="12" y1="15" x2="12" y2="3"></line>
+						</svg>
+						Download
+					</button>
+				</div>
+
+				<!-- Theme Selector -->
+				<div class="theme-selector">
+					<button class="theme-btn" data-theme="light" title="Switch to Light theme">Light</button>
+					<button class="theme-btn" data-theme="dim" title="Switch to Dim theme">Dim</button>
+					<button class="theme-btn" data-theme="lights-out" title="Switch to Lights Out theme">
+						Lights Out
+					</button>
+				</div>
+
+				<!-- Accent Selector -->
+				<div class="accent-selector">
+					<button
+						class="accent-btn"
+						data-accent="blue"
+						title="Blue accent color"
+						aria-label="Blue accent color"
+					></button>
+					<button
+						class="accent-btn"
+						data-accent="red"
+						title="Red accent color"
+						aria-label="Red accent color"
+					></button>
+					<button
+						class="accent-btn"
+						data-accent="green"
+						title="Green accent color"
+						aria-label="Green accent color"
+					></button>
+					<button
+						class="accent-btn"
+						data-accent="purple"
+						title="Purple accent color"
+						aria-label="Purple accent color"
+					></button>
+					<button
+						class="accent-btn"
+						data-accent="orange"
+						title="Orange accent color"
+						aria-label="Orange accent color"
+					></button>
+					<button
+						class="accent-btn"
+						data-accent="pink"
+						title="Pink accent color"
+						aria-label="Pink accent color"
+					></button>
+				</div>
+			</div>
+
+			<!-- Builder -->
+			<div class="builder">
+				<div class="builder-section">
+					<div class="section-title">Profile Information</div>
+
+					<label>Display Name</label>
+					<input id="name" type="text" placeholder="e.g., Mahdi Mirzadeh" value="Mahdi Mirzadeh">
+
+					<label>Username</label>
+					<input id="username" type="text" placeholder="e.g., MahdiMirzadehX" value="MahdiMirzadehX">
+					<small class="helper-text">Profile picture will be fetched from your Twitter/X username</small>
+
+					<label class="toggle-label">
+						<span class="toggle-text">Verified Account</span>
+						<input
+							type="checkbox"
+							id="verified"
+							class="toggle-input"
+							checked
+							aria-label="Toggle verified account badge"
+						>
+						<span class="toggle-switch" aria-hidden="true"></span>
+					</label>
+				</div>
+
+				<div class="section-divider"></div>
+
+				<div class="builder-section">
+					<div class="section-title">System Details</div>
+
+					<label>Operating System</label>
+					<select id="currentDistro"></select>
+
+					<label>Graphical Environment</label>
+					<select id="graphicalEnv"></select>
+
+					<label>Shell</label>
+					<select id="shell"></select>
+
+					<label>Terminal</label>
+					<select id="terminal"></select>
+
+					<label>Kernel Version (Optional)</label>
+					<input id="kernel" type="text" placeholder="e.g., 6.6.1-arch1-1" value="6.17.8-zen1-1-zen">
+				</div>
+			</div>
+		</div>
+
+		<footer>
+			<p>
+				View source on <a href="https://github.com/MahdiMirzadeh/unixcard" target="_blank">GitHub</a>•
+				Follow me on <a href="https://x.com/MahdiMirzadehX" target="_blank">Twitter/X</a>
+			</p>
+		</footer>
+
+		<script src="html2canvas.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>
