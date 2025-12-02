@@ -1,6 +1,6 @@
 # unixcard
 
-![Screenshot of unixcard showing a customizable Linux system card with theme options and preview panel](./image.png)
+<p align="center"><img src="./image.png" alt="Screenshot of unixcard showing a customizable Linux system card with theme options and preview panel" /></p>
 
 A web-based tool to create and customize X.com-style system cards showcasing your Linux setup and configuration.
 
